@@ -1,3 +1,20 @@
+/* Premium background card layout */
+.card-container {
+  background: linear-gradient(135deg, #fff 60%, #e0e7ff 100%);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(99,102,241,0.12), 0 1.5px 0 #b22234;
+  padding: 32px 18px 18px 18px;
+  margin: 0 auto 24px auto;
+  max-width: 600px;
+  position: relative;
+}
+@media (max-width: 600px) {
+  .card-container {
+    max-width: 98vw;
+    border-radius: 14px;
+    padding: 14px 4px 12px 4px;
+  }
+}
 /* Add Inter font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 /* Withdrawal ticker card always visible and responsive */
