@@ -70,13 +70,25 @@ if (document.readyState === 'loading') {
     fillTicker();
     ensureTickerVisible();
   }
-// Always enable the Watch Ad button and open the ad link
+// Watch Ad button: open ad, then after 5s, increase balance
 document.addEventListener('DOMContentLoaded', function() {
   var watchAdBtn = document.getElementById('watch-ad-btn');
+  var balanceSpan = document.getElementById('balance');
+  var timerDiv = document.getElementById('timer');
+  let balance = parseFloat(balanceSpan.textContent) || 0;
   if (watchAdBtn) {
     watchAdBtn.disabled = false;
     watchAdBtn.onclick = function() {
       window.open('https://www.effectivegatecpm.com/dctcbjypcn?key=0ad242fdde521bd25b3b104af0599901', '_blank');
+      watchAdBtn.disabled = true;
+      timerDiv.textContent = 'Please wait 5 seconds...';
+      setTimeout(function() {
+        balance += 0.5;
+        balanceSpan.textContent = balance.toFixed(2);
+        timerDiv.textContent = 'Balance updated!';
+        watchAdBtn.disabled = false;
+        setTimeout(function() { timerDiv.textContent = ''; }, 2000);
+      }, 5000);
     };
   }
 });
