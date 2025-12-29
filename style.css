@@ -1,0 +1,232 @@
+/* Withdrawal ticker card always visible and responsive */
+.withdrawal-ticker-card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 18px 0 0 0;
+  min-height: 48px;
+  box-sizing: border-box;
+}
+.withdrawal-ticker {
+  width: 100%;
+  max-width: 480px;
+  background: #fff;
+  color: #111;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.08rem;
+  font-weight: 600;
+  padding: 10px 0 9px 0;
+  border-radius: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  box-shadow: 0 2px 16px rgba(60,59,110,0.13);
+  letter-spacing: 0.2px;
+  min-height: 28px;
+  position: relative;
+  border: 2px solid #222;
+}
+@keyframes fadeInMsg {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.ticker-message {
+  display: inline-block;
+  margin-right: 0;
+  font-size: 1.08rem;
+  color: #000 !important;
+  opacity: 0;
+  animation: fadeInMsg 0.7s forwards;
+}
+@keyframes ticker-move {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-120%); }
+}
+@media (max-width: 600px) {
+  .withdrawal-ticker {
+    max-width: 98vw;
+    font-size: 0.98rem;
+    padding: 8px 0 7px 0;
+  }
+  .ticker-message {
+    font-size: 0.98rem;
+    margin-right: 32px;
+  }
+}
+/* Withdrawal button styling */
+.withdraw-btn {
+  display: block;
+  margin: 16px auto 0 auto;
+  background: linear-gradient(90deg, #3c3b6e 60%, #b22234 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-size: 1.08rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(60,59,110,0.10);
+  letter-spacing: 0.5px;
+}
+.withdraw-btn:hover {
+  background: linear-gradient(90deg, #b22234 60%, #3c3b6e 100%);
+  box-shadow: 0 4px 16px rgba(60,59,110,0.13);
+}
+/* USA flag banner at top */
+.usa-flag-banner {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(60,59,110,0.07);
+  border-bottom: 2.5px solid #b22234;
+}
+body {
+  background: linear-gradient(120deg, #f7fafc 0%, #e3e9f3 100%);
+  color: #222;
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+.container {
+  max-width: 420px;
+  margin: 48px auto 32px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(60,59,110,0.10), 0 1.5px 0 #b22234;
+  padding: 32px 24px 16px 24px;
+  border: 2.5px solid #b22234;
+  position: relative;
+}
+header h1 {
+  margin: 0 0 8px 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2.3rem;
+  letter-spacing: 1.5px;
+  color: #b22234;
+  text-shadow: 1px 1px 0 #fff, 2px 2px 0 #3c3b6e;
+  font-weight: 700;
+  text-align: center;
+}
+.subtitle {
+  color: #3c3b6e;
+  font-size: 1.08rem;
+  margin-bottom: 18px;
+  font-weight: 500;
+  text-align: center;
+}
+.trust-badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+  justify-content: center;
+}
+.badge {
+  background: #e3e9f3;
+  color: #3c3b6e;
+  border-radius: 12px;
+  padding: 3px 12px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  border: 1.5px solid #b22234;
+  box-shadow: 0 1px 4px rgba(60,59,110,0.07);
+}
+header p {
+  margin: 0 0 24px 0;
+  color: #3c3b6e;
+  font-size: 1.1rem;
+}
+#ad-section {
+  margin-bottom: 32px;
+  text-align: center;
+}
+#watch-ad-btn, #earn-btn {
+  background: linear-gradient(90deg, #b22234 60%, #3c3b6e 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-size: 1.13rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(60,59,110,0.10);
+  letter-spacing: 0.5px;
+}
+#watch-ad-btn:hover, #earn-btn:enabled:hover {
+  background: linear-gradient(90deg, #3c3b6e 60%, #b22234 100%);
+  box-shadow: 0 4px 16px rgba(60,59,110,0.13);
+}
+#earn-btn:disabled {
+  background: #eee;
+  color: #bbb;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+#timer {
+  margin-top: 8px;
+  font-size: 1.08rem;
+  color: #b22234;
+  font-weight: 600;
+}
+#balance-section {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.info-note {
+  color: #3c3b6e;
+  font-size: 0.98rem;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+/* USA flag row */
+.usa-flags {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.flag {
+  width: 32px;
+  height: 20px;
+  background: linear-gradient(90deg, #b22234 50%, #fff 50%);
+  border: 2px solid #3c3b6e;
+  margin: 0 4px;
+  border-radius: 3px;
+  position: relative;
+  box-shadow: 0 1px 4px rgba(60,59,110,0.10);
+}
+.flag:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 12px;
+  height: 100%;
+  background: #3c3b6e;
+  border-radius: 2px 0 0 2px;
+}
+footer {
+  text-align: center;
+  color: #aaa;
+  font-size: 0.95rem;
+  margin-top: 24px;
+}
+.footer-note {
+  color: #b22234;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+footer {
+  text-align: center;
+  color: #aaa;
+  font-size: 0.95rem;
+  margin-top: 24px;
+}
