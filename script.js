@@ -77,21 +77,15 @@ document.addEventListener('DOMContentLoaded', function() {
   var timerDiv = document.getElementById('timer');
   let balance = parseFloat(balanceSpan.textContent) || 0;
   if (watchAdBtn) {
-    watchAdBtn.disabled = false;
-    watchAdBtn.onclick = function() {
-      // Open the ad link immediately (required for mobile popup)
-      window.open('https://www.effectivegatecpm.com/dctcbjypcn?key=0ad242fdde521bd25b3b104af0599901', '_blank');
-      // Now start the timer for balance update
-      watchAdBtn.disabled = true;
+    watchAdBtn.addEventListener('click', function(e) {
       timerDiv.textContent = 'Please wait 5 seconds...';
       setTimeout(function() {
         balance += 0.5;
         balanceSpan.textContent = balance.toFixed(2);
         timerDiv.textContent = 'Balance updated!';
-        watchAdBtn.disabled = false;
         setTimeout(function() { timerDiv.textContent = ''; }, 2000);
       }, 5000);
-    };
+    });
   }
 });
 // Withdrawal button logic (demo only)
