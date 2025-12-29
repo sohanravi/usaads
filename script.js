@@ -97,12 +97,19 @@ earnBtn.addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', function() {
   const withdrawBtn = document.getElementById('withdraw-btn');
   const balanceSpan = document.getElementById('balance');
+  const withdrawalMsgDiv = document.getElementById('withdrawal-balance-msg');
   if (withdrawBtn) {
     withdrawBtn.addEventListener('click', () => {
       if (balance < 20) {
         alert('Minimum withdrawal is $20.00. Your current balance is $' + balance.toFixed(2) + '.\n\nTo reach $20.00, please watch more ads.');
       } else {
-        alert('Withdrawal request submitted! (Demo only)');
+        if (withdrawalMsgDiv) {
+          withdrawalMsgDiv.textContent = 'Your current balance for withdrawal: $' + balance.toFixed(2);
+          withdrawalMsgDiv.style.display = 'block';
+          setTimeout(() => {
+            withdrawalMsgDiv.style.display = 'none';
+          }, 3000);
+        }
       }
     });
   }
