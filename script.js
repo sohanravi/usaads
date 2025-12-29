@@ -4,6 +4,7 @@ const withdrawalNames = [
   'Ethan', 'Isabella', 'Logan', 'Charlotte', 'James', 'Amelia', 'Benjamin', 'Harper',
   'Elijah', 'Evelyn', 'Alexander', 'Abigail', 'William', 'Ella', 'Michael', 'Scarlett',
   'Daniel', 'Grace', 'Matthew', 'Chloe', 'Henry', 'Zoe', 'Jackson', 'Penelope', 'Sebastian', 'Layla', 'Jack', 'Riley', 'Aiden', 'Lily', 'Samuel', 'Aria', 'David', 'Avery', 'Joseph', 'Sofia', 'Carter', 'Camila', 'Owen', 'Aurora'
+];
 // Withdrawal message rotator with 20 fixed names and messages
 const withdrawalMsgs = [
   'Rishu: Withdrawal $30.00 successfully!',
@@ -60,16 +61,6 @@ if (document.readyState === 'loading') {
 } else {
   startWithdrawalMsgRotation();
 }
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-      fillTicker();
-      ensureTickerVisible();
-    });
-  } else {
-    fillTicker();
-    ensureTickerVisible();
-  }
 // Global balance variable
 let balance = 0.0;
 document.addEventListener('DOMContentLoaded', function() {
