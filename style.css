@@ -1,3 +1,5 @@
+/* Add Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 /* Withdrawal ticker card always visible and responsive */
 .withdrawal-ticker-card {
   width: 100%;
@@ -42,36 +44,47 @@
   100% { transform: translateX(-120%); }
 }
 @media (max-width: 600px) {
-  .withdrawal-ticker {
-    max-width: 98vw;
-    font-size: 0.98rem;
-    padding: 8px 0 7px 0;
+  body {
+    font-size: 1em;
   }
-  .ticker-message {
-    font-size: 0.98rem;
-    margin-right: 32px;
+  .container {
+    max-width: 98vw;
+    margin: 12px auto 12px auto;
+    border-radius: 14px;
+    padding: 14px 4px 12px 4px;
+  }
+  header h1 {
+    font-size: 1.3rem;
+  }
+  .subtitle {
+    font-size: 1.02rem;
+  }
+  .withdraw-btn, #watch-ad-btn, #earn-btn {
+    padding: 10px 18px;
+    font-size: 1em;
+    border-radius: 14px;
   }
 }
 /* Withdrawal button styling */
 .withdraw-btn {
   display: block;
   margin: 16px auto 0 auto;
-  background: linear-gradient(90deg, #3c3b6e 60%, #b22234 100%);
+  background: linear-gradient(90deg, #6366f1 0%, #60a5fa 100%);
   color: #fff;
   border: none;
-  border-radius: 8px;
-  padding: 12px 32px;
-  font-size: 1.08rem;
-  font-family: 'Montserrat', Arial, sans-serif;
+  border-radius: 24px;
+  padding: 14px 36px;
+  font-size: 1.13rem;
+  font-family: 'Inter', 'Montserrat', Arial, sans-serif;
   font-weight: 700;
   cursor: pointer;
   transition: background 0.2s, box-shadow 0.2s;
-  box-shadow: 0 2px 8px rgba(60,59,110,0.10);
+  box-shadow: 0 2px 8px rgba(99,102,241,0.10);
   letter-spacing: 0.5px;
 }
 .withdraw-btn:hover {
-  background: linear-gradient(90deg, #b22234 60%, #3c3b6e 100%);
-  box-shadow: 0 4px 16px rgba(60,59,110,0.13);
+  background: linear-gradient(90deg, #2563eb 0%, #60a5fa 100%);
+  box-shadow: 0 4px 16px rgba(99,102,241,0.15);
 }
 /* USA flag banner at top */
 .usa-flag-banner {
@@ -85,27 +98,29 @@
   border-bottom: 2.5px solid #b22234;
 }
 body {
-  background: linear-gradient(120deg, #f7fafc 0%, #e3e9f3 100%);
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
   color: #222;
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: 'Inter', 'Montserrat', 'Roboto', Arial, sans-serif;
   margin: 0;
   min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .container {
-  max-width: 420px;
-  margin: 48px auto 32px auto;
+  max-width: 600px;
+  margin: 32px auto 24px auto;
   background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 8px 32px rgba(60,59,110,0.10), 0 1.5px 0 #b22234;
-  padding: 32px 24px 16px 24px;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px rgba(99,102,241,0.10), 0 1.5px 0 #b22234;
+  padding: 32px 18px 18px 18px;
   border: 2.5px solid #b22234;
   position: relative;
 }
 header h1 {
   margin: 0 0 8px 0;
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 2.3rem;
-  letter-spacing: 1.5px;
+  font-family: 'Inter', 'Montserrat', Arial, sans-serif;
+  font-size: 2.1rem;
+  letter-spacing: 1px;
   color: #b22234;
   text-shadow: 1px 1px 0 #fff, 2px 2px 0 #3c3b6e;
   font-weight: 700;
@@ -113,10 +128,11 @@ header h1 {
 }
 .subtitle {
   color: #3c3b6e;
-  font-size: 1.08rem;
+  font-size: 1.13rem;
   margin-bottom: 18px;
   font-weight: 500;
   text-align: center;
+  letter-spacing: 0.2px;
 }
 .trust-badges {
   display: flex;
@@ -144,24 +160,24 @@ header p {
   text-align: center;
 }
 #watch-ad-btn, #earn-btn {
-  background: linear-gradient(90deg, #b22234 60%, #3c3b6e 100%);
+  background: linear-gradient(90deg, #6366f1 0%, #60a5fa 100%);
   color: #fff;
   border: none;
-  border-radius: 8px;
-  padding: 12px 32px;
+  border-radius: 24px;
+  padding: 14px 36px;
   font-size: 1.13rem;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'Inter', 'Montserrat', Arial, sans-serif;
   font-weight: 700;
   margin-top: 10px;
   margin-bottom: 8px;
   cursor: pointer;
   transition: background 0.2s, box-shadow 0.2s;
-  box-shadow: 0 2px 8px rgba(60,59,110,0.10);
+  box-shadow: 0 2px 8px rgba(99,102,241,0.10);
   letter-spacing: 0.5px;
 }
 #watch-ad-btn:hover, #earn-btn:enabled:hover {
-  background: linear-gradient(90deg, #3c3b6e 60%, #b22234 100%);
-  box-shadow: 0 4px 16px rgba(60,59,110,0.13);
+  background: linear-gradient(90deg, #2563eb 0%, #60a5fa 100%);
+  box-shadow: 0 4px 16px rgba(99,102,241,0.15);
 }
 #earn-btn:disabled {
   background: #eee;
