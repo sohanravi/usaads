@@ -79,7 +79,9 @@ document.addEventListener('DOMContentLoaded', function() {
   if (watchAdBtn) {
     watchAdBtn.disabled = false;
     watchAdBtn.onclick = function() {
+      // Open the ad link immediately (required for mobile popup)
       window.open('https://www.effectivegatecpm.com/dctcbjypcn?key=0ad242fdde521bd25b3b104af0599901', '_blank');
+      // Now start the timer for balance update
       watchAdBtn.disabled = true;
       timerDiv.textContent = 'Please wait 5 seconds...';
       setTimeout(function() {
