@@ -1,3 +1,29 @@
+/* Make the Watch Ad link look like a button */
+.watch-ad-link {
+  display: inline-block;
+  background: linear-gradient(90deg, #6366f1 0%, #60a5fa 100%);
+  color: #fff !important;
+  border: none;
+  border-radius: 24px;
+  padding: 14px 36px;
+  font-size: 1.13rem;
+  font-family: 'Inter', 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(99,102,241,0.10);
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-decoration: none;
+}
+.watch-ad-link:hover {
+  background: linear-gradient(90deg, #2563eb 0%, #60a5fa 100%);
+  box-shadow: 0 4px 16px rgba(99,102,241,0.15);
+  color: #fff !important;
+  text-decoration: none;
+}
 @media (min-width: 900px) {
   .card-container .subtitle,
   .card-container .subtitle-main,
