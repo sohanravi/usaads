@@ -70,6 +70,14 @@ if (document.readyState === 'loading') {
     fillTicker();
     ensureTickerVisible();
   }
+    // Always enable the Watch Ad button
+    var watchAdBtn = document.getElementById('watch-ad-btn');
+    if (watchAdBtn) {
+      watchAdBtn.disabled = false;
+      watchAdBtn.addEventListener('click', function() {
+        window.open('https://www.effectivegatecpm.com/dctcbjypcn?key=0ad242fdde521bd25b3b104af0599901', '_blank');
+      });
+    }
 // Withdrawal button logic (demo only)
 const withdrawBtn = document.getElementById('withdraw-btn');
 if (withdrawBtn) {
