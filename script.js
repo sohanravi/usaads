@@ -92,7 +92,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
-earnBtn.addEventListener('click', () => {
 // Withdrawal button logic (demo only)
 document.addEventListener('DOMContentLoaded', function() {
   const withdrawBtn = document.getElementById('withdraw-btn');
