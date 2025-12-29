@@ -70,43 +70,40 @@ if (document.readyState === 'loading') {
     fillTicker();
     ensureTickerVisible();
   }
-// Watch Ad button: open ad, then after 5s, increase balance
+// Global balance variable
+let balance = 0.0;
 document.addEventListener('DOMContentLoaded', function() {
   var watchAdBtn = document.getElementById('watch-ad-btn');
   var balanceSpan = document.getElementById('balance');
   var timerDiv = document.getElementById('timer');
-  let balance = parseFloat(balanceSpan.textContent) || 0;
+  // Initialize balance from span if needed
+  if (balanceSpan && !isNaN(parseFloat(balanceSpan.textContent))) {
+    balance = parseFloat(balanceSpan.textContent);
+  }
   if (watchAdBtn) {
     watchAdBtn.addEventListener('click', function(e) {
       timerDiv.textContent = 'Please wait 5 seconds...';
       setTimeout(function() {
         balance += 0.5;
-        balanceSpan.textContent = balance.toFixed(2);
+        if (balanceSpan) balanceSpan.textContent = balance.toFixed(2);
         timerDiv.textContent = 'Balance updated!';
         setTimeout(function() { timerDiv.textContent = ''; }, 2000);
       }, 5000);
     });
   }
 });
+earnBtn.addEventListener('click', () => {
 // Withdrawal button logic (demo only)
-const withdrawBtn = document.getElementById('withdraw-btn');
-if (withdrawBtn) {
-  withdrawBtn.addEventListener('click', () => {
-    if (balance < 20) {
-      alert('Minimum withdrawal is $20.00. Your current balance is $' + balance.toFixed(2) + '.\n\nTo reach $20.00, please watch more ads.');
-    } else {
-      alert('Withdrawal request submitted! (Demo only)');
-    }
-  });
-}
-earnBtn.addEventListener('click', () => {
-let balance = 0.0;
-
-earnBtn.addEventListener('click', () => {
-  balance += 0.50;
-  balanceSpan.textContent = balance.toFixed(2);
-  earnBtn.disabled = true;
-  timerDiv.textContent = 'Reward claimed! Watch again to earn more.';
+document.addEventListener('DOMContentLoaded', function() {
+  const withdrawBtn = document.getElementById('withdraw-btn');
+  const balanceSpan = document.getElementById('balance');
+  if (withdrawBtn) {
+    withdrawBtn.addEventListener('click', () => {
+      if (balance < 20) {
+        alert('Minimum withdrawal is $20.00. Your current balance is $' + balance.toFixed(2) + '.\n\nTo reach $20.00, please watch more ads.');
+      } else {
+        alert('Withdrawal request submitted! (Demo only)');
+      }
+    });
+  }
 });
-
-resetAd();
